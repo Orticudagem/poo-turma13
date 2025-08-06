@@ -35,8 +35,9 @@ public class Circulo {
     @Override
     public String toString(){
         return "Centro: " + this.coordX +
-                ", " + this.coordY +
-                " raio: " + this.raio;
+                ", "      + this.coordY +
+                " raio: " + this.raio + 
+                " area: " + this.area();
     }
 
   /*
