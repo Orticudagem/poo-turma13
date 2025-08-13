@@ -1,4 +1,4 @@
-# Desenvolvimento Java 21
+# Desenvolvimento Java 21 - Turma 13
 - Repositório base para uso em disciplinas de desenvolvimento de software
 - Configurado para desenvolvimento em Java21 
 - Pensado para ser usado como "Monorepo" para uma série de projetos de aula
