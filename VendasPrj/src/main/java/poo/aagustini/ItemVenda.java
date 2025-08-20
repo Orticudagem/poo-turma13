@@ -15,7 +15,7 @@ public class ItemVenda {
 
     @Override
     public String toString() {
-        return String.format("%s \t %d \t R$ %.2f",
+        return String.format("%-10s \t %3d \t R$ %5.2f",
                              prod.getNome(),
                              qtde,
                              this.getValor());

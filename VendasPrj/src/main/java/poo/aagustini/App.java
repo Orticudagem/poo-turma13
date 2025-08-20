@@ -12,9 +12,9 @@ public class App {
         //cadProd.cadastrar(p1);   // depois de criar o método cadastrar...
         
         CadastroProdutos cadProdutos = new CadastroProdutos();
-        cadProdutos.cadastrar(123, "lapis", 2.5);
-        cadProdutos.cadastrar(124, "caneta", 5);
-        cadProdutos.cadastrar(125, "borracha", 4.5);
+        cadProdutos.cadastrar(123, "Lapis", 2.5);
+        cadProdutos.cadastrar(124, "Caneta", 5);
+        cadProdutos.cadastrar(125, "Borracha", 4.5);
 
         System.out.println("\n");
         System.out.println(cadProdutos.toString());
@@ -41,10 +41,12 @@ public class App {
             System.out.println("\nProduto 200 não está no cadastro");
         }
 
+        Cliente cli1 = new Cliente(1,"Huguinho","Av. Brasil, 1");
         System.out.println("\n");
-        Venda venda1 = new Venda();
+        Venda venda1 = new Venda(cli1);
         venda1.inserir(10, cadProdutos.pesquisar(123));
-        venda1.inserir(cadProdutos.pesquisar(125));
+        venda1.inserir(2, cadProdutos.pesquisar(125));
+        venda1.inserir(cadProdutos.pesquisar(124));
 
         System.out.println(venda1.fecharVenda());
 
