@@ -30,6 +30,12 @@ public class CadastroProdutos {
         listaProd.add(prod);
     }
 
+    // método cadastrar está "sobrecarregado"
+    // dependendo dos parâmetros usa um ou outro método
+    public void cadastrar(Produto prod){
+        listaProd.add(prod);
+    }
+
     public Produto pesquisar(int codigo) {
         // podemos percorrer com for tradicional
         // como fizemos no toString
