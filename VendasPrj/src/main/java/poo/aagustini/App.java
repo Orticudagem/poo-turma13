@@ -41,7 +41,11 @@ public class App {
             System.out.println("\nProduto 200 não está no cadastro");
         }
 
-        Cliente cli1 = new Cliente(1,"Huguinho","Av. Brasil, 1");
+        Cliente cli1 = new Estudante(1,
+                                     "Huguinho",
+                                    "Av. Brasil, 1",
+                                    "111-11",
+                                    "PUCRS");
         System.out.println("\n");
         Venda venda1 = new Venda(cli1);
         venda1.inserir(10, cadProdutos.pesquisar(123));
@@ -65,7 +69,7 @@ public class App {
         System.out.println("\n- - - Cadastro de produtos - - -\n");
         System.out.println(cadProdutos.toString());
      
-        Cliente cli2 = new Cliente(2,"Zezinho","Av. Brasil, 1");
+        Cliente cli2 = new ClientePJ(2,"Biscoitos do Zé","Av. Brasil, 1","222/0002-2");
         System.out.println("\n");
         Venda venda2 = new Venda(cli2);
         venda2.inserir(20, cadProdutos.pesquisar(123));

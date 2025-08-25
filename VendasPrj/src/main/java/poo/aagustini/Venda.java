@@ -38,9 +38,9 @@ public class Venda {
                                    
         notaF.append("\nNota de Venda (Exercício Vendas Prj) - POO \n");
         notaF.append("\nCliente: ");
-        notaF.append(cliente.toString());
+        //notaF.append(cliente.toString());
         // ou... somente
-        //notaF.append(cliente.getNome());
+        notaF.append(cliente.getNome());
         notaF.append("\n");
 
         for (ItemVenda item : itens) {
