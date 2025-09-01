@@ -46,6 +46,7 @@ public class App {
                                     "Av. Brasil, 1",
                                     "111-11",
                                     "PUCRS");
+        //System.out.println(cli1.getCPF());
         System.out.println("\n");
         Venda venda1 = new Venda(cli1);
         venda1.inserir(10, cadProdutos.pesquisar(123));
@@ -77,6 +78,10 @@ public class App {
         venda2.inserir(cadProdutos.pesquisar(323));
 
         System.out.println(venda2.fecharVenda());
+
+        // ao colocar Cliente como abstact nao podemos mais dar new Cliene
+        // Cliente cli3 = new Cliente(3,"John Doe","Av. c. s/n");
+
 
     }
 }

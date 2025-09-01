@@ -11,6 +11,11 @@ public class ClientePF extends Cliente {
         this.cpf = umCpf;
     }
 
+    public String getCPF(){
+        return this.cpf;
+    }
+
+    @Override
     public String toString() {
         return super.toString() + " CPF: " +this.cpf;
     }

@@ -49,7 +49,35 @@ public class Venda {
         }
 
         notaF.append(String.format("\n\n\t    Valor total: R$ %5.2f",this.valorTotal()));
-        
+        notaF.append("\n- - - - - - - - - - - - - - - - - -\n");
+
+        for (ItemVenda item : itens) {
+            Produto prod = item.getProduto();
+
+            // tipo estático (da declaração) - Produto
+            // tipo dinâmico (do new) é ProdutoEE?
+            if (prod instanceof ProdutoEE) {
+                // erro mesmo que tenha dado new ProdutoEE
+                // prod só "vê" o que está na classe Produto
+                // isso é chamado tipo estático
+                //notaF.append( prod.getGarantia());
+
+                // como resolver...
+                // como eu sei que o que está em prod é EE
+                // então faço um casting para poder usar produtoEE
+                ProdutoEE prodEE = (ProdutoEE) prod;
+
+                // agora posso usar a garantia
+                notaF.append( prodEE.getGarantia());
+                notaF.append("\n- - - - - - - - - - - - - - - - - -\n");
+
+
+
+
+            }
+        }
+
+
         return notaF.toString();
     }
     

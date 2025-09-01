@@ -13,6 +13,10 @@ public class ItemVenda {
         return prod.getPreco() * qtde;
     } 
 
+    public Produto getProduto() {
+        return this.prod;
+    }
+
     @Override
     public String toString() {
         return String.format("%-10s \t %3d \t R$ %5.2f",

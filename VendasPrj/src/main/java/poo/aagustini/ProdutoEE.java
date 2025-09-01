@@ -1,6 +1,7 @@
 package poo.aagustini;
 
-// produtos Eletro-eletronicos possuem garantia
+import java.time.LocalDate;
+
 
 // Usando herança
 // extends -  ProdutoEE "é um tipo de" Produto
@@ -19,6 +20,16 @@ public class ProdutoEE extends Produto {
         // um construtor que receba: (int, String, double)             
         super(umCodigo, umNome, umPreco);
         this.diasGarantia = diasGarantia;
+    }
+
+    public String getGarantia() {
+        LocalDate hoje = LocalDate.now();
+        String garantia = "Produto: " + getNome()  +
+                          "\nDias garantia: " + this.diasGarantia +
+                          "\nVencimento garantia: " + hoje.plusDays(diasGarantia);
+
+        return garantia;
+
     }
 
     @Override

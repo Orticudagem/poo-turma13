@@ -1,6 +1,6 @@
 package poo.aagustini;
 
-public class Cliente {
+public abstract class Cliente {
     private int codigo;
     private String nome;
     private String endereco;
