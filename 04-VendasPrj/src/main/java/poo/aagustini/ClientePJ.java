@@ -11,6 +11,12 @@ public class ClientePJ extends Cliente {
         this.cnpj = umCnpj;
     }
 
+    @Override
+    public String getID() {
+        return this.cnpj;
+    }
+
+    @Override
     public String toString() {
         return super.toString() + " CNPJ: " +this.cnpj;
     }

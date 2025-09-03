@@ -11,6 +11,8 @@ public abstract class Cliente {
         this.endereco = endereco;
     }
 
+    public abstract String getID();
+
     public int getCodigo() {
         return codigo;
     }

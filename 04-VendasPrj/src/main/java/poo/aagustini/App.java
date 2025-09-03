@@ -82,6 +82,31 @@ public class App {
         // ao colocar Cliente como abstact nao podemos mais dar new Cliene
         // Cliente cli3 = new Cliente(3,"John Doe","Av. c. s/n");
 
+              // erro - não posso dar new em classes abstratas
+        //Cliente cli3 = new Cliente(3,"John Doe", "av. Canoas");
+
+        CadastroClientes cadCli = new CadastroClientes();
+        cadCli.cadastrar(cli1);
+        cadCli.cadastrar(cli2);
+        cadCli.cadastrar(new ClientePF(3, "huginho", "disney", "333-33"));
+        cadCli.cadastrar(new ClientePJ(4, "Patinhas inc", "nao info", "444/0004"));
+        
+        System.out.println(cadCli.relatorio());
+
+        Cliente c = cadCli.pesquisar("111-11");
+
+        System.out.println("\n\nresultado da pesquisa 1:");
+        System.out.println( c.toString() );
+
+        Cliente c2 = cadCli.pesquisar("444/0004");
+
+        System.out.println("\n\nresultado da pesquisa 2:");
+        System.out.println( c2.toString() );
+
+
+        System.out.println("\n\nA próxima venda será a de nro:" +
+                             Venda.getProxNumeroFiscal());
+
 
     }
 }

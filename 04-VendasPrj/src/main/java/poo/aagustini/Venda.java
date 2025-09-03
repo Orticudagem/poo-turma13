@@ -4,12 +4,29 @@ import java.util.ArrayList;
 
 public class Venda {
     private Cliente cliente;
-
     private ArrayList<ItemVenda> itens;
+
+    // a Venda tem, também, um número da nota
+    private int numeroNF;
+
+    // para isso preciso de um contador de notas
+    // este número não é de uma Venda, mas do conjunto de Vendads
+    // para isso usamos atributos estáticos
+
+    // static - só é inicializdo uma vez, quando criar o primeiro objeto
+    private static int proximoNroNF = 1000;
  
     public Venda(Cliente umCliente) {
         itens = new ArrayList<>();
         this.cliente = umCliente;
+
+        this.numeroNF = Venda.proximoNroNF;
+        Venda.proximoNroNF += 3;
+    }
+
+
+    public static int getProxNumeroFiscal() {
+        return Venda.proximoNroNF;
     }
 
     public void inserir(Produto prod) {
@@ -36,7 +53,7 @@ public class Venda {
         // gera a nota de venda
         StringBuilder notaF = new StringBuilder();
                                    
-        notaF.append("\nNota de Venda (Exercício Vendas Prj) - POO \n");
+        notaF.append("\nNota de Venda (Exercício Vendas Prj) - POO \n Nota Fiscal Nro: " + numeroNF + "\n");
         notaF.append("\nCliente: ");
         //notaF.append(cliente.toString());
         // ou... somente
