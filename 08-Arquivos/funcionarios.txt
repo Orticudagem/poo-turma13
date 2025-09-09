@@ -1,0 +1,6 @@
+100;Zezinho;1000.0
+200;Huginho;2000.0
+300;Luizinho;3000.0
+400;Sr Smith;3500.0
+500;Sra Smith;2500.0
+600;patinhas;30000.0
