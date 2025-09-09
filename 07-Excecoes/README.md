@@ -12,9 +12,12 @@ javac AppExcecao1.java
 
 ## Para testar (observe a saída após cada execução)
 
-java AppExcecao1
 java AppExcecao1 17 3
-java AppExcecao1 13 tres 
+
+java AppExcecao1 17
+
+java AppExcecao1 13 tres
+
 java AppExcecao1 17 0
 
 ## Repetir o processo para os demais códigos 
