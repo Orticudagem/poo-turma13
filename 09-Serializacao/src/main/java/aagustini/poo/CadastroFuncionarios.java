@@ -1,17 +1,21 @@
 package aagustini.poo;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
+import java.lang.reflect.Type;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
-import java.io.*;
-import java.lang.reflect.Type;
-import java.nio.file.Paths;
-import java.nio.file.Path;
-import java.nio.file.Files;
-
-import java.nio.charset.Charset;
-
-import java.util.ArrayList;
 
 public class CadastroFuncionarios {
 
@@ -109,8 +113,10 @@ public class CadastroFuncionarios {
 
         // GSON tem um problema com desserialização de genéricos
         // ver: https://sites.google.com/site/gson/gson-user-guide#TOC-Collections-Examples
-        Type funcType = new TypeToken<ArrayList<Funcionario>>() {}.getType();
+        // Type funcType = new TypeToken<ArrayList<Funcionario>>() {}.getType();
+        TypeToken<ArrayList<Funcionario>> funcType = new TypeToken<ArrayList<Funcionario>>(){};
 
+        
         try {
 
             BufferedReader br = new BufferedReader(new FileReader(filename));
