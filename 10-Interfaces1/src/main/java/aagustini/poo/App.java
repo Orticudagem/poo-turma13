@@ -9,9 +9,12 @@ public class App {
         Professor p2 = new Professor("pedro", 222, 30, 60 );
         Salario p3 = new Professor("maria", 333, 40, 100 );
 
+        
+
         MotoristaTaxi m1 = new MotoristaTaxi("zezinho",123,
                 555,  "10/2020", 1234, 3000, 3);
 
+        
         // erro, não posso dar new (instanciar) interfaces        
         //Salario sal = new Salario();
 
@@ -20,7 +23,7 @@ public class App {
                 666,  "10/2022", 4321,
                 2500, 4);
 
-
+        
 
         // colocar em uma lista de "funcionários"
         ArrayList<Salario> func = new ArrayList<>();

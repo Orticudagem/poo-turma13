@@ -2,9 +2,9 @@ package aagustini.poo;
 
 public class App {
  
-    public static void mainStr(String[] args) {
-        //IPilhaStr p1 = new PilhaArrayStr();
-        IPilhaStr p1 = new PilhaAPIStr();
+    public static void main0(String[] args) {
+        IPilhaStr p1 = new PilhaArrayStr();
+        //IPilhaStr p1 = new PilhaAPIStr();
 
         p1.Empilhar("Ana");
         p1.Empilhar("Julia");

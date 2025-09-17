@@ -25,7 +25,7 @@ public class MotoristaTaxi implements Salario {
 
     public float getSalarioLiquido() {
         float salBruto = totalKmRodados * valorKm;
-        return ( salBruto - (salBruto*(float)0.05) );
+        return (float)( salBruto - (salBruto*0.05) );
     }
 
     public float getQuantidadeSalariosMinimo() {
