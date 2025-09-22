@@ -26,4 +26,14 @@ public class Residencial extends Imovel {
 
         return valor;
     }  
+
+    @Override
+    public String toString() {
+        String res =  "residencial - "+ super.toString();
+        if (areaTerreno > 1000) 
+            res = res +" imposto terreno: " + 100 * Imovel.getVR();
+        
+        return res;
+    } 
+
 }
