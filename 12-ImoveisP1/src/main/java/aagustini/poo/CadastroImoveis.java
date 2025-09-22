@@ -9,7 +9,7 @@ public class CadastroImoveis {
         imoveis.add(imovel);
     }
 
-    public void listar() {
+    public void listarSOUT() {
         int count  = 0;
         System.out.println("\n\nCadastro de imoveis:");
         for (Imovel imovel : imoveis) {
@@ -25,6 +25,16 @@ public class CadastroImoveis {
         System.out.println("\nNumero de residenciais: "+count);
         System.out.println();
     }
+
+    public String listar() {
+        StringBuilder res = new StringBuilder("\n\nCadastro de imoveis:");
+        for (Imovel imovel : imoveis) {
+            res.append(imovel.toString());
+            res.append("\n");
+        }
+        return res.toString();
+    }
+
 
     public void listar(String nome) {
         System.out.println("\n\nCadastro de imoveis do propr:" + nome);

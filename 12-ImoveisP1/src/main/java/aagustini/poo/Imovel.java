@@ -16,6 +16,8 @@ public abstract class Imovel {
     }
 
     public Imovel(String propr, int area, Geo geoLoc) {
+        if (propr == null || propr == "" )
+            throw new IllegalArgumentException("nome nao pode ser null");
         this.proprietario = propr;
         this.areaConstruida = area;
         this.geoLocalizacao = geoLoc;
